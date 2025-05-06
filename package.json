@@ -1,0 +1,14 @@
+{
+  "name": "fulfilment-bot",
+  "version": "1.0.0",
+  "description": "Telegram userbot for fulfilment notifications (Node.js version)",
+  "main": "fulfilment.js",
+  "scripts": {
+    "start": "node fillment.js"
+  },
+  "dependencies": {
+    "telegram": "^2.19.10",
+    "input": "^1.0.1",
+    "dotenv": "^16.0.3"
+  }
+} 
