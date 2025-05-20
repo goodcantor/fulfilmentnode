@@ -58,6 +58,12 @@ const stringSession = new StringSession(config.sessionString);
 
                 log(`📩 Новый пост в чате ${chat.id}: ${messageText.slice(0, 50)}...`);
 
+                // Проверка длины сообщения
+                if (messageText.length < config.minMessageLength || messageText.length > config.maxMessageLength) {
+                    log(`⚠️ Сообщение пропущено: длина ${messageText.length} символов не соответствует ограничениям (${config.minMessageLength}-${config.maxMessageLength})`);
+                    return;
+                }
+
                 // Фильтруем ненужные сообщения
                 if (
                     senderUsername.endsWith("bot") ||
